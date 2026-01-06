@@ -1,13 +1,11 @@
-# strategy.py
+
 import numpy as np
 from scipy.optimize import minimize
 from finance_math import portfolio_variance, sharpe_ratio
 
 
 def min_variance(mean_returns, cov_matrix):
-    """
-    Compute weights that minimize portfolio variance.
-    """
+   
     n = len(mean_returns)
     init_guess = np.ones(n) / n
     bounds = tuple((0, 1) for _ in range(n))
@@ -24,9 +22,6 @@ def min_variance(mean_returns, cov_matrix):
 
 
 def max_sharpe_ratio(mean_returns, cov_matrix, risk_free_rate=0.03):
-    """
-    Compute weights that maximize the Sharpe ratio.
-    """
     n = len(mean_returns)
     init_guess = np.ones(n) / n
     bounds = tuple((0, 1) for _ in range(n))
@@ -40,6 +35,7 @@ def max_sharpe_ratio(mean_returns, cov_matrix, risk_free_rate=0.03):
         constraints=constraints
     )
     return result.x
+
 
 
 
