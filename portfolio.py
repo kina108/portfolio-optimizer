@@ -3,9 +3,6 @@ from finance_math import calc_stats
 
 
 def optimize_portfolio(tickers, strategy_name, risk_free_rate=0.03):
-    """
-    Fetch data once and return optimal weights and stats.
-    """
     data, returns, mean_returns, cov_matrix = fetch_data(tickers)
     if strategy_name == "min_variance":
         from strategy import min_variance
@@ -18,11 +15,9 @@ def optimize_portfolio(tickers, strategy_name, risk_free_rate=0.03):
 
 
 def plot_efficient_frontier(tickers, strategy_name, risk_free_rate=0.03):
-    """
-    Fetch data once and plot frontier.
-    """
     data, returns, mean_returns, cov_matrix = fetch_data(tickers)
     return plot_frontier(mean_returns, cov_matrix, strategy_name, risk_free_rate)
+
 
 
 
