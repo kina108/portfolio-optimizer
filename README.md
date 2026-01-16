@@ -4,7 +4,8 @@ A Python-based tool for analyzing and optimizing investment portfolios using his
 
 The project focuses on applying quantitative methods to explore risk–return trade-offs and portfolio allocation strategies.
 
-**Live app:** https://portfolio-optimizer-btynevtuy9f3fje8xq35vv.streamlit.app/
+**Live link** : https://portfolio-optimizer-btynevtuy9f3fje8xq35vv.streamlit.app/
+ 
 ---
 
 ## Overview
